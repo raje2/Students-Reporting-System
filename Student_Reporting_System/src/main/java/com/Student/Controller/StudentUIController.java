@@ -41,9 +41,9 @@ public class StudentUIController {
 
         HashMap<String, Double> map2 = service.top2();
 
+        
         String s1="",s2="";
         Double d1 = 0.0,d2 = 0.0;
-        
         for(Map.Entry<String , Double> entry : map2.entrySet()){
             if(entry.getValue() > d1)
             {
@@ -160,8 +160,6 @@ public class StudentUIController {
 
 
 
-    /////////////////////////
-
     @RequestMapping("/home")
     public ModelAndView home(){
         ModelAndView model = new ModelAndView("home.jsp");
@@ -175,7 +173,7 @@ public class StudentUIController {
     public String saveStudent() throws IOException {
 
 
-        Student s = new Student("101","Raj",new ArrayList<Semester>());
+        Student s = new Student("101","Rajesh",new ArrayList<Semester>());
         System.out.println(s.toString());
         return "save.jsp";
     }
